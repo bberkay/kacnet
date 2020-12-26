@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <style>
+    /* Content */
+    .textbox-Title{
+        color:#ce1b45;
+        font-weight: bold;
+        font-size:20px;
+    }
+    .btn-custom{
+        background-color:#ce1b45;
+        color:#fff;
+    }
+    .btn-custom:hover{
+        color:#fff;
+        transition:0.5s background;
+        background-color:#840321;
+    }
+    #content-hr{
+        height:5px;
+        background-color:#eaeaea;
+        margin-top:80px;
+    }
+    #FAQ-Title{
+        color:#ce1b45;
+        font-weight: bold;
+    }
+    #FAQ-Question{
+        color:#ce1b45;
+    }
+    /* Content End */
+
+    </style>
+
+    <!-- Main -->
+    <main class = "container">
+        <article align = "center" class = "w-75 mx-auto mt-5">
+            <p class = "textbox-Title" align = "left">Önlisans Programı</p>
+                <form  method="POST" action="{{ url_for('onlisans_table') }}">
+                    <div class="input-group mb-3">
+                        <select  name = "onlisans_sayac" class="form-control text-uppercase"> <!-- Üniversite Bölümlerini Yazdır -->
+                            {% for eleman in liste %}
+                                <option value = {{liste.index(eleman)+1}}>{{eleman.text}}</option>
+                            {% endfor %}
+                            </select>
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-custom">Hesapla</button>
+                            </div>
+                    </div>
+                </form>
+        </article>
+        <hr id = "content-hr" class = "mx-auto">
+        <article align = "center" class = "w-75 mx-auto mt-5">
+            <h2 id = "FAQ-Title">S.S.S</h2>
+            <section id = "question-section" class = "mt-5">
+                <h4 id = "FAQ-Question" align = "left">Neyi Hesaplıyorum ?</h4>
+                <p class = "text-justify pt-2"><a href = "https://yokatlas.yok.gov.tr/"><b class = "text-dark">YOKATLAS</b></a> sitesinden çekilmiş önlisans ve lisans bölümlerinin taban puanları ve net sayılarının
+                ortalamasını hesaplanıyor ve öğrencilerin seçeceği bölüm için grafik ve tablolar halinde daha
+                rahat analiz yapılması sağlanıyor.</p>
+            </section>
+            <hr>
+            <section id = "question-section" class = "mt-4">
+                <h4 id = "FAQ-Question" align = "left">Nasıl Hesaplanıyor ?</h4>
+                <p class = "text-justify pt-2">Seçtiğiniz önlisans veya lisans bölümünün tüm üniversitelerinin taban puanlarının ve net
+                istatistiklerinin ortalaması farklı veri işleme teknikleri ile hesaplanıyor.
+                </p>
+            </section>
+            <hr>
+            <section id = "question-section" class = "mt-4">
+                <h4 id = "FAQ-Question" align = "left">Lise Eklenilecek Mi ?</h4>
+                <p class = "text-justify pt-2">Liseler için resmi bir atlas bulunmadığından dolayı en güvenilir verilerin elde edilmesi zor
+                olacağından lise taban puanlarının ve netlerin hesaplanmasında da doğru sonuçlar
+                doğurmayacaktır lakin ilerleyen zamanlar da bununla ilgili bir çalışma yapılırsa sitemiz de
+                duyurulacaktır.</p>
+            </section>
+            <hr>
+        </article>
+    </main>
+    <!-- Main End -->
+{% endblock body %}

@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% from "includes/formhelpers.html" import render_field %}
+{% block body %}
+ <!-- Main -->
+    <style>
+    /* Content */
+    .textbox-Title{
+        color:#ce1b45;
+        font-weight: bold;
+        font-size:18px;
+    }
+    .btn-custom{
+        background-color:#ce1b45;
+        color:#fff;
+    }
+    .btn-custom:hover{
+        color:#fff;
+        transition:0.5s background;
+        background-color:#840321;
+    }
+    #FAQ-Title{
+        color:#ce1b45;
+        font-weight: bold;
+    }
+    /* Content End */
+    </style>
+    <main class = "container">
+        <article class = "w-75 mx-auto mt-5">
+            <h2 id = "FAQ-Title" align = "center">İletişim</h2>
+            <form method = "post">
+                <div class="form-group">
+                    {{render_field(form.name,class = "form-control",placeholder = "İsminizi Giriniz...")}}
+                </div>
+                <div class="form-group">
+                    {{render_field(form.email,class = "form-control",placeholder = "E-Postanızı Giriniz...")}}
+                </div>
+                <div class="form-group">
+                    {{render_field(form.subject,class = "form-control",placeholder = "Konunuz Hakkında Kısa Bir Başlık Giriniz...")}}
+                </div>
+                <div class="form-group">
+                    {{render_field(form.message,class = "form-control",rows="3",placeholder = "Mesajınızı Giriniz...")}}
+                </div>
+                {% if success == True %}
+                <button class="btn btn-success form-control" disabled>Başarıyla Gönderildi</button>
+                {% else %}
+                <button type="submit" class="btn btn-custom form-control">Gönder</button>
+                {% endif %}
+                <small id="emailHelp" class="form-text text-muted">Bilgileriniz hiçbir yerde paylaşılmayacaktır.</small>
+            </form>           
+        </article>
+    </main>
+    <!-- Main End -->
+{% endblock body %}

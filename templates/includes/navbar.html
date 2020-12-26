@@ -1,0 +1,61 @@
+<!-- Navbar -->
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        font-family:sans-serif;
+    }
+    /* Navbar */
+    #kacnet-logo{
+        color:#ce1b45;
+        text-decoration: none;
+        font-family: cocogoose;
+        font-size:35px;
+    }
+    @font-face{
+        font-family:cocogooseRegular;
+        src:url("../fonts/cocogoose/Cocogoose Pro-trial.ttf");
+    }
+    #menu-link{
+        color:black;
+    }
+    #menu-link:hover{
+        color:#c2c2c2;
+        transition: 0.2s color;
+    }
+    @media(max-width:991px){
+        #menu-invisible{
+            color:transparent;
+            position: absolute;
+        }    
+    }
+    #menu-hr{
+        background-color:#ce1b45;
+        height:25px;
+        margin-top:-5px;
+    }
+    /* Navbar End */ 
+    </style>
+    <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <h1><a href="/" alt = "kacnet-homepage" id = "kacnet-logo">KACNET</a></h1> 
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/onlisans" id = "menu-link">Önlisans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id = "menu-invisible">|</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lisans" id = "menu-link">Lisans</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+    </div>
+    <hr id = "menu-hr">
+<!-- Navbar End -->

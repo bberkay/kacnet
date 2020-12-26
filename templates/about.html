@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <style>
+    /* Content */
+    #kacnet-logo-sm{
+        color:#ce1b45;
+        text-decoration: none;
+        font-family: cocogoose;
+        font-size:25px;
+    }
+    .textbox-Title{
+        color:#ce1b45;
+        font-weight: bold;
+        font-size:18px;
+    }
+    .btn-custom{
+        background-color:#ce1b45;
+        color:#fff;
+    }
+    .btn-custom:hover{
+        color:#fff;
+        transition:0.5s background;
+        background-color:#840321;
+    }
+    #FAQ-Title{
+        color:#ce1b45;
+        font-weight: bold;
+    }
+    #FAQ-Question{
+        color:#ce1b45;
+    }
+    /* Content End */
+    </style>
+<!-- Main -->
+    <main class = "container">
+        <article align = "center" class = "w-75 mx-auto mt-5">
+            <h2 id = "FAQ-Title">Hakkımızda</h2>
+            <section id = "question-section" class = "mt-5">
+                <h4 id = "FAQ-Question" align = "left"><span id = "kacnet-logo-sm">KACNET</span> Kim ?</h4>
+                <p class = "text-justify pt-2">KACNET Bir net hesaplama aracıdır. Seçeceğiniz herhangi bir bölümün net ve taban puanı gibi
+                istatistiklerini çeşitli düzenlenmiş, sıralanmış veriler aracılığı ile gösterir.
+                </p>
+            </section>
+            <hr>
+            <section id = "question-section" class = "mt-4">
+                <h4 id = "FAQ-Question" align = "left">Kim Tarafından Yapıldı ?</h4>
+                <p class = "text-justify pt-2">KACNET ../../.. tarihinde <a href="https://www.linkedin.com/">Berkay KAYA</a> tarafından üniversite taban
+                puanı ve netlerinin çeşitli veri işleme teknikleri ile lisans ve ön lisans okuyacak öğrencilere
+                yardım etmesi amaçlılığı ile yapmıştır. KACNET kesinlikle üniversite tavsiyesi vermemektedir.
+                </p>
+            </section>
+            <hr>
+            <section id = "question-section" class = "mt-4">
+                <h4 id = "FAQ-Question" align = "left">Sosyal Medya</h4>
+                <div class="social-media-icons ml-1 mt-4" align = "left">
+                    <i class="fab fa-google-plus-g mr-2 text-danger"></i><span class = "text-danger">|</span><span class = "ml-2 text-dark mr-4">bberkaykaya0@gmail.com</span>
+                    <a href="https://github.com/bberkay"><i class="fab fa-github text-dark mr-2"></i><span class = "text-dark">|</span><span class = "ml-2 text-dark mr-4">bberkay</span></a>
+                    <a href="https://stackoverflow.com/users/13156185/bberkay?tab=profile"><i class="fab fa-stack-overflow mr-2 text-warning"></i><span class = "text-warning">|</span><span class = "ml-2 text-dark mr-4">bberkay</span></a>
+                    <a href="https://www.kaggle.com/berkaykaya"><i class="fab fa-kaggle mr-2 text-info"></i><span class = "text-info">|</span><span class = "ml-2 text-dark mr-4">berkaykaya</span></a>
+                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in text-primary mr-2"></i><span class = "text-primary">|</span><span class = "ml-2 text-dark mr-4">berkaykaya</span></a>
+                </div>
+            </section>
+            <hr>
+        </article>
+    </main>
+    <!-- Main End -->
+{% endblock body %}
