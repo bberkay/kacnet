@@ -324,7 +324,7 @@ def contact():
         message = form.message.data
         mesaj = MIMEMultipart()
         mesaj["From"] = email
-        mesaj["To"] = "kacnet.tk@gmail.com"
+        mesaj["To"] = "email"
         mesaj["Subject"] = subject
         yazi = name + " adlı kullanıcı tarafından;\n\n\n\n" + subject.upper() + "\n--------------------------------------\n" + message + "\n--------------------------------------\n" + "gönderilmiştir." + "\n\n" + email
         mesaj_govdesi = MIMEText(yazi,"plain")
@@ -333,7 +333,7 @@ def contact():
             mail = smtplib.SMTP("smtp.gmail.com",587)
             mail.ehlo()
             mail.starttls()
-            mail.login("kacnet.tk@gmail.com","Ekox.54321")
+            mail.login("email","password")
             mail.sendmail(mesaj["From"],mesaj["To"],mesaj.as_string())
             mail.close()
             return render_template("contact.html",form = form,success = True)
